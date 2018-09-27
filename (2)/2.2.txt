@@ -1,0 +1,10 @@
+#e1.1TempConvert.py
+money=input("gyjjyu:")
+if money[-1] in ['rmb','RMB']:
+    D= (eval(money[0:-1])*6
+    print("ikado{:.2f}dollar".format(D))
+elif money[-1] in ['dollar','DOLLAR']:
+    R=eval(money[0:-1])/6
+    print("ikado{:.2f}rmb.format(R))
+else:
+    print("forse")
