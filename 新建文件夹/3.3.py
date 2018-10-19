@@ -16,3 +16,12 @@ for i in range(365):
     else:
         dayup=dayup * (1+dayfactor)
 print("上10下1: {:.2f}.".format(dayup))
+
+dayup, dayfactor = 1.0, 0.01
+for i in range(1,366):  #0-6 7天  1-7 7
+    if i % 10 in [4,5,6,7]:
+        dayup = dayup * (1 + dayfactor)
+    print("{}：天的能力{}".format(i+1,dayup))
+
+
+
