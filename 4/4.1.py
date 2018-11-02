@@ -76,3 +76,26 @@ while r > 0:
     r = x % y
 
 print('{}和{}最大公约数是：{}， 最小公倍数是：{}'.format(n1, n2, y, n1 * n2 / y))
+
+
+3-
+for i in range(11):
+    if i in [0,5,10]:
+        print("+ - - - - + - - - - +") # "+","-"*4,"+","-"*4,"+"
+    else:
+        print("|")
+
+for i in range(11):
+    for j in range(11):
+        if i%5==0
+            if j%5 ==0:
+                print("+",end='')
+            else:
+                print("-",end='')
+        else:
+            if j%5 == 0:
+                print("|",end='')
+            else:
+                print(" ",end='')
+        
+
