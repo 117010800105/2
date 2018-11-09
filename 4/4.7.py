@@ -15,3 +15,15 @@ else:
     print("没有发生异常")
 finally:
     print("程序执行完毕，不知有没有发生异常")
+  
+def tbedge(n):
+    print('+ - - - - ' * n + '+')
+def lredge(n):
+    print('|         ' * n + '|')
+def matts(n):
+    for i in range(5*n+1):
+        if i%5 == 0:
+            tbedge(n)
+        else:
+            lredge(n)
+matts(4)          
