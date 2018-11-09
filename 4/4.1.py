@@ -83,7 +83,7 @@ for i in range(11):
     if i in [0,5,10]:
         print("+ - - - - + - - - - +") # "+","-"*4,"+","-"*4,"+"
     else:
-        print("|")
+        print("|    "*4)
 
 for i in range(11):
     for j in range(11):
