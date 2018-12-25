@@ -7,6 +7,8 @@ def multi(*a): #发表示a可变
     return t
 
 print( multi(1,2,3,4,5,6,7,8,9,10))
+
+ 10-1
 import requests
 from bs4 import BeautifulSoup
 allUniv=[]
@@ -44,3 +46,22 @@ def main(p):
     printUnivList(p)
 
 main('江西')
+
+#把数量改为5个
+def printUnivList(s,rank):
+    c=0
+    print("{1:^2}{2:{0}^10}{3:{0}^6}{4:{0}^4}{5:{0}^10}".format(chr(12288),"排名","学校名称","省市","总分","培养规模"))
+    for u in allUniv:
+        if s in u[1]:#u1指的是从第1组选取  学校名称
+            print("{1:^2}{2:{0}^10}{3:{0}^6}{4:{0}^4}{5:{0}^10}".format(chr(12288),u[0],u[1],u[2],u[3],u[4]))
+            c += 1
+            if c == rank:
+                break
+def main(p,rank):
+    url='http://www.zuihaodaxue.cn/zuihaodaxuepaiming2018.html'
+    html=getHTMLText(url)
+    soup=BeautifulSoup(html,'html.parser')
+    fillUnivList(soup)
+    printUnivList(p,rank)
+
+main('江西',5)
