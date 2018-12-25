@@ -65,3 +65,39 @@ def main(p,rank):
     printUnivList(p,rank)
 
 main('江西',5)
+
+def getHTMLText(url):
+    send_headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36",
+        "Connection": "keep-alive",
+        "Accept": "text/html,ap
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+        "Accept-Language": "zh-CN,zh;q=0.8"}
+    try:
+        r=requests.get(url,header=send_headers)
+        r.raise_for_status()
+        r.encoding='utf-8'
+        return r.text
+    except:
+        return ""
+def fillUnivList(soup,allUniv):
+    date=soup.find_all('div',{'class':re.compile('shadow-dark')})
+    for div in date:
+        singleUniv = []
+        divl = div.find('div',{'style':'margin-left:2.5rem;'})
+        rank=divl.get_text().strip()
+        singleUniv.append(rank.split(' ')[0])
+
+        h3=div.find('h3')
+        singleUniv.append(h3.get_text().strip())
+
+        ldiv = div.find_all('div',{'style':'padding-right: 0.5rem;'})
+        singleUniv.append(ldiv[0].strong.string)
+        singleUniv.append(ldiv[1].strong.string)
+        allUniv.append(singleuniv)
+def printUnivList(allUniv):
+    print("
+    for u in allUniv:
+          print(
+def main(num):
+    allUni
