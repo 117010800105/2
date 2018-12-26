@@ -11,12 +11,12 @@ else:
     print("not a number")
 
     
-   import requests
+import requests
 import time
 def getHTMLText(url,coding='gbk'):
     try:
         r=requests.get(url,timeout=30)
-        r,raise_for_status()
+        r.raise_for_status()
         r.encoding=coding
         return r.test
     except:
