@@ -18,7 +18,7 @@ def getHTMLText(url,coding='gbk'):
         r=requests.get(url,timeout=30)
         r.raise_for_status()
         r.encoding=coding
-        return r.test
+        return r.text
     except:
         return""
 
