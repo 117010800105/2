@@ -22,9 +22,9 @@ def getHTMLText(url,coding='gbk'):
     except:
         return""
 
-def downloadTmageFile(imgUrl, destUrl, fname=''):  #网址，下载地，另存地
-    local_fillname = imgUrl.split('/')[-1]
-    print('Download Tmage File={}'.format(local_filename))
+def downloadImageFile(imgUrl, destUrl, fname=''):  #网址，下载地，另存地
+    local_filname = imgUrl.split('/')[-1]
+    print('Download Image File={}'.format(local_filename))
     try:
         r=requests.get(imgUrl,stream=True)
         r.raise_for_status()
