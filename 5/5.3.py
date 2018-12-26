@@ -23,7 +23,7 @@ def getHTMLText(url,coding='gbk'):
         return""
 
 def downloadImageFile(imgUrl, destUrl, fname=''):  #网址，下载地，另存地
-    local_filname = imgUrl.split('/')[-1]
+    local_filename = imgUrl.split('/')[-1]
     print('Download Image File={}'.format(local_filename))
     try:
         r=requests.get(imgUrl,stream=True)
@@ -44,7 +44,7 @@ def downloadImageFile(imgUrl, destUrl, fname=''):  #网址，下载地，另存�
 
 
 
-from New import *
+
 import json
 import re
 
